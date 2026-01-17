@@ -1,5 +1,97 @@
 /* Auth Page Styles */
+/* Animation styles */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
+.gradient-bg {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #2196F3, #21CBF3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #1976D2, #1E88E5);
+}
+
+/* Form field focus animations */
+.MuiTextField-root .MuiInputLabel-root.Mui-focused {
+  transform: translate(14px, -9px) scale(0.75);
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #2196F3;
+  border-width: 2px;
+}
+
+/* Role selection card hover effect */
+.role-card {
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.role-card:hover {
+  transform: translateY(-4px);
+  border-color: #2196F3;
+  box-shadow: 0 12px 20px rgba(33, 150, 243, 0.1);
+}
+
+.role-card.selected {
+  background: linear-gradient(45deg, rgba(33, 150, 243, 0.1), rgba(33, 203, 243, 0.1));
+  border-color: #2196F3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .MuiPaper-root {
+    margin: 16px;
+    padding: 24px !important;
+  }
+  
+  .MuiStepper-root {
+    padding: 16px !important;
+  }
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loading-pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
 .auth-container {
   min-height: 100vh;
   display: flex;

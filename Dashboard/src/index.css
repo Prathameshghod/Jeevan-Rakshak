@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -13,6 +17,33 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Global input styles to ensure visibility */
+input,
+select,
+textarea {
+  color: #1f2937 !important;
+  background-color: #ffffff !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9ca3af !important;
+  opacity: 1;
+}
+
+/* Dark mode input styles */
+.dark input,
+.dark select,
+.dark textarea {
+  color: #f9fafb !important;
+  background-color: #374151 !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #9ca3af !important;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -24,8 +55,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }

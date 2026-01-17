@@ -9,7 +9,6 @@ import { useLanguage } from '../contexts/LanguageContext';
 import product9 from '../data/JR3.png';
 import { SparklineAreaData } from '../data/dummy';
 import { database } from '../firebaseConfig';
-import TestComponent from '../TestComponent';
 
 const Dashboard = () => {
   const { currentColor } = useStateContext();
@@ -142,8 +141,6 @@ const Dashboard = () => {
 
   return (
     <div className="mt-8 px-4 md:px-6">
-      <TestComponent />
-      
       {/* Welcome Banner */}
       <div className="mb-8 p-6 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 dark:from-blue-600 dark:to-cyan-600 shadow-lg">
         <div className="flex items-center justify-between">
