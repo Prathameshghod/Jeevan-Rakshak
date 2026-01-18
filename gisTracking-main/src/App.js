@@ -924,6 +924,7 @@
         popUp: "Node 16"
       }
     ]);
+    // eslint-disable-next-line no-sparse-arrays
     const [userPolylines, setUserPolylines] = useState([
       // ...existing polylines...
       [
@@ -959,7 +960,6 @@
           [21.1490, 79.0890], // Start coordinate
           [21.1467, 79.0867], // End coordinate
         ],
-        
         [
           [21.070747,79.065341],  //Node1
           [21.070308,79.065248],  //Node2
@@ -1263,6 +1263,7 @@
       }
     };
 
+    // eslint-disable-next-line no-unused-vars
     const handleMapClick = (e) => {
       // eslint-disable-next-line no-console
       console.log("Using the function");

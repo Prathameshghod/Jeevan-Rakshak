@@ -1,7 +1,6 @@
 
-import firebase from 'firebase/app';
 import 'firebase/firestore';
-import { collection, addDoc, doc ,setDoc ,getDocs} from 'firebase/firestore';
+import { collection, addDoc, getDocs} from 'firebase/firestore';
 import { firestore } from './firebase';
 
 // Fetch all polylines from Firestore 'pipelines' collection
